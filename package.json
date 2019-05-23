@@ -2,7 +2,9 @@
   "name": "react-spinners-ci",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "sideEffects": false,
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
@@ -41,6 +43,13 @@
     "rimraf": "^2.6.3",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-string": "^3.0.0",
     "rollup-plugin-terser": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "engines": {
+    "node": ">=8"
   }
 }

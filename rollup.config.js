@@ -1,6 +1,7 @@
 import babel from "rollup-plugin-babel";
 import resolve from "rollup-plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
+import { string } from "rollup-plugin-string";
 
 const dist = "dist";
 const bundle = "bundle";
@@ -32,6 +33,10 @@ module.exports = {
     babel({
       exclude: "node_modules/**" // only transpile our source code
     }),
-    production && terser()
+    production && terser(),
+    string({
+      // Required to be specified
+      include: "**/*.css"
+    })
   ]
 };
