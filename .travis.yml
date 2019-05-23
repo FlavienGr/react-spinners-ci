@@ -10,7 +10,7 @@ install:
 
 script:
   - npm run lint
-  - npm test:coveralls
+  - npm run test:coveralls
 
 notifications:
   email: false
