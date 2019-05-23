@@ -14,7 +14,8 @@
     "storybook:build": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "test:staged": "jest --findRelatedTests"
   },
   "repository": {
     "type": "git",
