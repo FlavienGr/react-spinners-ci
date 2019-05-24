@@ -16,7 +16,9 @@
     "test:watch": "jest --watch",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:coverage": "jest --coverage",
-    "test:staged": "jest --findRelatedTests"
+    "test:staged": "jest --findRelatedTests",
+    "pre-deploy": "npm run storybook:build",
+    "deploy": "gh-pages -d dist storybook-static"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/FlavienGr/react-spinners-ci/issues"
   },
-  "homepage": "https://github.com/FlavienGr/react-spinners-ci#readme",
+  "homepage": "https://flaviengr.github.io/react-spinners-ci/",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -50,6 +52,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-standard": "^4.0.0",
+    "gh-pages": "^2.0.1",
     "husky": "^2.3.0",
     "jest": "^24.8.0",
     "lint-staged": "^8.1.7",
