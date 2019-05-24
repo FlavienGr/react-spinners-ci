@@ -18,7 +18,7 @@
     "test:coverage": "jest --coverage",
     "test:staged": "jest --findRelatedTests",
     "pre-deploy": "npm run storybook:build",
-    "deploy": "gh-pages -d dist storybook-static"
+    "deploy": "gh-pages -d storybook-static"
   },
   "repository": {
     "type": "git",
